@@ -11,6 +11,7 @@ class User(AbstractUser):
         blank=True
        
     )
+    email_token = models.CharField(max_length=36, null=True, blank=True)
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS= ['username']

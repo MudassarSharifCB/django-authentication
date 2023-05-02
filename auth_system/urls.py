@@ -19,5 +19,8 @@ from myapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('signup', views.signup_view, name='signup')
+    path('signup', views.signup_view, name='signup'),
+    path('login/', views.login_view, name='login'),
+    path('verify/<str:token>/',views.activate, name='activate'), 
+    path('reset/', views.password_reset, name='reset'),
 ]
